@@ -22,7 +22,7 @@ with advanced shutdown features for more natural behaviour:
 * If you press power-off then Raspberry will shutdown
 
 All metadata is always saved
--->
+--->
 
 Turn switch "SAFE SHUTDOWN" on PCB to ON.
 
@@ -45,7 +45,7 @@ You can edit the python script and add some parameters to the script calls:
                   --emupid to check if an Emulator is running"
 
 ```
--->
+--->
 
 ## Section 2. Uninstallers
 
