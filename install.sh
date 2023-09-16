@@ -14,7 +14,8 @@ sudo apt-get update -y
 
 #Step 3) disable UART from retroflag install ---------------
 cd /boot/
-File=config.txt
+# Use config-user.txt for OSMC as OSMC got control over config.txt and replace any changes.
+File=config_user.txt
 if grep -q "^enable_uart=1" "$File";
 	then
 		echo "UART is already enabled. Disabeling now!"
@@ -44,8 +45,9 @@ if [ -e $script ];
 fi
 
 wget -N -q --show-progress "https://raw.githubusercontent.com/crcerror/retroflag-picase/master/SafeShutdown.py"
-wget -N -q --show-progress "https://raw.githubusercontent.com/crcerror/retroflag-picase/master/multi_switch.sh"
-chmod +x multi_switch.sh
+# Deactivated multi-switch as it is only adapted for Emulation Station
+#wget -N -q --show-progress "https://raw.githubusercontent.com/crcerror/retroflag-picase/master/multi_switch.sh"
+#chmod +x multi_switch.sh
 
 #-----------------------------------------------------------
 
@@ -64,7 +66,8 @@ fi
 
 #Step 7) enable overlay file for powercut ---------------
 cd /boot/
-File=config.txt
+# Use config-user.txt for OSMC as OSMC got control over config.txt and replace any changes.
+File=config-user.txt
 if ! grep -q "^dtoverlay=gpio-poweroff,gpiopin=4,active_low=1,input=1" $File; then
     echo "Enable overlay file"
     echo "# Overlay setup for proper powercut, needed for Retroflag cases" >> "$File"
