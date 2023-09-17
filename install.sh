@@ -45,9 +45,8 @@ if [ -e $script ];
 fi
 
 wget -N -q --show-progress "https://raw.githubusercontent.com/crcerror/retroflag-picase/master/SafeShutdown.py"
-# Deactivated multi-switch as it is only adapted for Emulation Station
-#wget -N -q --show-progress "https://raw.githubusercontent.com/crcerror/retroflag-picase/master/multi_switch.sh"
-#chmod +x multi_switch.sh
+wget -N -q --show-progress "https://raw.githubusercontent.com/crcerror/retroflag-picase/master/multi_switch.sh"
+chmod +x multi_switch.sh
 
 #-----------------------------------------------------------
 
