@@ -1,4 +1,5 @@
 # retroflag-picase for OSMC
+A modification of RetroFlag safe shutdown installatation script from [crcerror](https://github.com/crcerror) adapted for OSMC (usr of `/boot/config-user.txt` instead of `/boot/config.txt`).
 
 **Section 1**\
 Installers for NesPi+, MegaPi, SuperPi cases and (since 2020/08/22) **NESPI4**
